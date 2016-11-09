@@ -1,0 +1,65 @@
+<html>
+<head>
+<meta name="robots" content="noindex, nofollow, noarchive">
+<title></title>
+<link href='https://fonts.googleapis.com/css?family=Josefin+Sans:700' rel='stylesheet' type='text/css'>
+<style type="text/css">
+    body{ 
+        background-color: #e0e0e0;
+        margin:0px 0px; 
+    }
+   
+
+    #w1{
+        background-size:cover;
+        position:relative;
+        height:100vh;
+    }
+
+    .w2{
+        position:absolute;
+        top:30%;
+        width:100%;
+        font-size: 7em;
+        font-family: 'Josefin Sans', sans-serif;
+        letter-spacing: 0.05em;
+        color: #fff;
+        text-align: center;
+        -webkit-font-smoothing: antialiased;
+        text-transform: uppercase;
+        text-shadow: 2px 2px 0px #999;
+        -ms-transform: translate(0,-50%); /* IE 9 */
+        -webkit-transform: translate(0,-50%); /* Safari */
+        transform: translate(0,-50%);  
+    }
+
+    span.s {
+        opacity: 0.4;
+    }
+</style>
+</head>
+<body>
+<div id="wrapper">
+  <div id="w1">
+    <div class="w2">
+	  <div id="d"></div>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript">
+	var d = window.location.pathname; //.split( '/' );
+	console.log(window.location.pathname);
+	d = d.replace("/domains/", "").replace("/", "");
+	var s = "";
+	if(d.lastIndexOf(".")>-1)
+	{
+		var s = d.slice(d.lastIndexOf("."));
+		d = d.substring(0, d.lastIndexOf(".")); 
+		d = d.toUpperCase();
+		document.title = d;
+	}
+	document.getElementById("d").innerHTML = d + '<span class="s">' + s + '</span>';
+</script>
+</body>
+</html>
