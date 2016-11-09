@@ -42,23 +42,9 @@
 <div id="wrapper">
   <div id="w1">
     <div class="w2">
-	  <div id="d">TRUMPUT<span class="s">.im</span></div>    
+		<div id="d">TRUMPUT<span class="s">.in</span></div>
+    </div>
   </div>
 </div>
-
-<script type="text/javascript">
-	var d = window.location.pathname; //.split( '/' );
-	console.log(window.location.pathname);
-	d = d.replace("/domains/", "").replace("/", "");
-	var s = "";
-	if(d.lastIndexOf(".")>-1)
-	{
-		var s = d.slice(d.lastIndexOf("."));
-		d = d.substring(0, d.lastIndexOf(".")); 
-		d = d.toUpperCase();
-		document.title = d;
-	}
-	document.getElementById("d").innerHTML = d + '<span class="s">' + s + '</span>';
-</script>
 </body>
 </html>
